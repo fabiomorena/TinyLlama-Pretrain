@@ -1,0 +1,37 @@
+### model
+model_name_or_path: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
+### method
+stage: pretrain
+do_train: true
+finetuning_type: full
+flash_attn: auto
+
+### dataset
+dataset: pretrain_data
+dataset_dir: data
+template: llama2
+cutoff_len: 512
+max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 4
+
+### output
+output_dir: saves/TinyLlama-Pretrain
+logging_steps: 10
+save_steps: 100
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 5.0e-5
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+fp16: true
+ddp_timeout: 180000000
+
+### eval
+val_size: 0.0

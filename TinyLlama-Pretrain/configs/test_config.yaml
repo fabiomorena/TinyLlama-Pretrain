@@ -1,0 +1,29 @@
+### model
+model_name_or_path: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
+### method
+stage: pt  # <- ÄNDERN: "pt" statt "pretrain"
+do_train: true
+finetuning_type: full
+
+### dataset
+dataset: pretrain_data
+dataset_dir: data
+template: llama2
+cutoff_len: 128
+max_samples: 10
+overwrite_cache: true
+preprocessing_num_workers: 1
+
+### output
+output_dir: saves/test-run
+logging_steps: 1
+save_steps: 5
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 1
+learning_rate: 5.0e-5
+max_steps: 2
+fp16: false

@@ -1,0 +1,3 @@
+Hello world. This is a test.
+Machine learning is fascinating.
+Python is great for AI development.

@@ -59,4 +59,3 @@ Canvas
 Bild
 
 
-Da Gemini Fehler machen kann, auch bei Informationen über Personen, solltest du die Antworten überprüfen. Datenschutz und Gemini
